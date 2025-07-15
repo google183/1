@@ -13,7 +13,7 @@
   <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Google_logo.svg/1200px-Google_logo.svg.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://www.gofundme.com/f/urgent-aid-for-the-survival-of-the-alsaidi-family-from-gaza" />
+  <meta property="og:url" content="https://www.google.com" />
 
   <!-- Twitter Preview -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -66,17 +66,19 @@
   </style>
 
   <script>
-    function redirectToLink() {
-      window.location.href = "https://www.gofundme.com/f/urgent-aid-for-the-survival-of-the-alsaidi-family-from-gaza";
+    function redirectToGoogle() {
+      const query = document.querySelector('.search-bar').value;
+      const url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+      window.location.href = url;
     }
   </script>
 </head>
 <body>
   <div class="google-search-container">
     <img class="google-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Google_logo.svg/1200px-Google_logo.svg.png" alt="Google Logo">
-    <input class="search-bar" type="text" placeholder="Search Google" onkeydown="if(event.key === 'Enter') redirectToLink()">
+    <input class="search-bar" type="text" placeholder="Search Google" onkeydown="if(event.key === 'Enter') redirectToGoogle()">
     <br>
-    <button class="search-button" onclick="redirectToLink()">Search</button>
+    <button class="search-button" onclick="redirectToGoogle()">Search</button>
   </div>
 </body>
 </html>
